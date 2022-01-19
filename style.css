@@ -1,3 +1,17 @@
-body {
+h1 {
+  font-size: 50px;
+  color : #FF6E80;
+  text-shadow: 3px 3px #5B39B8;
+  text-align: center;
+}
 
+h3 {
+  font-size: 30px;
+  color: #AF125A;
+  text-shadow: 1px 1px #5B39B8;
+  text-decoration: overline;
+}
+
+body {
+  background-color: #7C4DF9 ;
 }
