@@ -1,6 +1,6 @@
 @font-face { 
   font-family: smw2; 
-  src: "Comic Sans MS"; 
+  src: url(../smw2-yoshis-island.ttf); 
 } 
 
 h1 {
