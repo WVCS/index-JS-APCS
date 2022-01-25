@@ -18,6 +18,12 @@ nav{
   padding: 20px;
 }
 
+.logo {
+ display: inline;
+ float: left;
+ padding-left: 20px;
+}
+
 a {
   text-decoration: none;
   color: #f3f0ff;
