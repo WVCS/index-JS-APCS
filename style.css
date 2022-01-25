@@ -78,9 +78,11 @@ body {
   background-color: #3d1fc2;
   border-radius: 20px;
   width: 60%;
-  position: absolute;
+  /*position: absolute;*/
   right: 15%;
   top: 70%;
+  margin: auto;
+  margin-top: 150px;
 }
 
 #list {
@@ -90,9 +92,10 @@ body {
   border-color: #3d26a3;
   border-width: 8px;
   border-radius: 20px;
-  position:absolute;
+  margin-top: 150px;
+  float: left;
   top: 70%;
-  width: 20%;
+  width: 250px;
 }
 
 #fruit {
