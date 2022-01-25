@@ -23,6 +23,7 @@ nav{
   float: left;
   padding-left: 20px;
   width: 100px;
+  height: auto;
 }
 
 a {
