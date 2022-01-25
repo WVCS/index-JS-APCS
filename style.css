@@ -21,8 +21,7 @@ nav{
 .logo {
   display: inline;
   float: left;
-  margin-left: 20px;
-  background-color: #541270;
+  padding-left: 10px;
 }
 
 a {
@@ -68,6 +67,7 @@ li{
 body {
   /*background-color: #4723e8;*/
   background-image: url("images/main_imgs/bg-img.png");
+  background-attachment: fixed;
 }
 
 #title {
