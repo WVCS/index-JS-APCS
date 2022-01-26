@@ -5,8 +5,7 @@
 
 nav{
   list-style-type: none;
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   /*background-color: #7a16a6;*/
   background-image: url("images/main_imgs/nav-bg.png");
   width: 100%;
