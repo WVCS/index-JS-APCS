@@ -6,7 +6,7 @@
 nav{
   list-style-type: none;
   position: fixed;
-  /*background-color: #7a16a6;*/
+  background-color: #7a16a6;
   background-image: url("images/main_imgs/nav-bg.gif");
   width: 100%;
   left: 0;
