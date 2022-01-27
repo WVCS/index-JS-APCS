@@ -71,6 +71,10 @@ body {
   background-attachment: fixed;
 }
 
+img {
+  image-rendering: pixelated;
+}
+
 #title {
   font-family: "smw2", sans-serif;
   background-color: #3d1fc2;
