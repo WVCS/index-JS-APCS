@@ -71,6 +71,10 @@ body {
   background-attachment: fixed;
 }
 
+.smooth_img {
+  image-rendering: auto;
+}
+
 img {
   image-rendering: pixelated;
 }
