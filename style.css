@@ -103,7 +103,8 @@ img {
 }
 
 #list {
-  background-color: #3d1fc2;
+  /*background-color: #3d1fc2;*/
+  background-image: url("images/main_imgs/orange_bg.gif");
   border-radius: 20px;
   border-style: ridge;
   border-color: #3d26a3;
