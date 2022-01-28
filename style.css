@@ -107,6 +107,7 @@ img {
   background-image: url("images/main_imgs/orange_bg.gif");
   repeat-background: repeat-x;
   repeat-background: repeat-y;
+  height: 50px;
   border-radius: 20px;
   border-style: ridge;
   border-color: #3d26a3;
