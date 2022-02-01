@@ -93,6 +93,7 @@ img {
 
 #tableDiv {
   background-color: #3d1fc2;
+  background-image: url("images/main_imgs/orange-wave.gif");
   border-radius: 20px;
   width: 60%;
   /*position: absolute;*/
@@ -121,7 +122,6 @@ img {
   border-collapse: collapse;
   width: 100%;
   text-align: left;
-  background-image: url("images/main_imgs/orange-wave.gif");
 }
 
 th, td {
