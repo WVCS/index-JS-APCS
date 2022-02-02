@@ -141,4 +141,5 @@ td {
 .mario {
   background-color: #c62828;
   background-image: url("images/main_imgs/mario-bg.gif");
+  background-attachment: fixed;
 }
