@@ -44,6 +44,10 @@ a {
   font-size: 30px;
 }
 
+p {
+  color: #fcb83a;
+}
+
 .navLink:hover {
   background-color: #541270;
   transition: 0.5s;
