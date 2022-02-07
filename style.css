@@ -24,6 +24,7 @@ nav{
   border-width: 8px;
   border-radius: 15px;
   background-image: url("images/main_imgs/orange-wave.gif");
+  background-attachment: fixed;
 }
 
 .navLink {
