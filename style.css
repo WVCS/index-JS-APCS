@@ -13,6 +13,19 @@ nav{
   top: 0;
 }
 
+.pageNav {
+  width: 160px;
+  background-color: #4723e8;
+  top: 90px;
+  margin-left: 10px;
+  padding: 10px;
+  border-style: ridge;
+  border-color: #3d26a3;
+  border-width: 8px;
+  border-radius: 15px;
+  background-image: url("images/main_imgs/orange-wave.gif");
+}
+
 .navLink {
   display: inline;
   float: right;
@@ -148,6 +161,7 @@ td {
   color: #f3f0ff;
   font-size: 25px;
   background-color: #7a16a6;
+  background-image: url("images/main_imgs/purple-lights.gif");
   border: 2px solid blue;
   border-radius: 20px;
   display: block;
