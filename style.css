@@ -183,6 +183,7 @@ td {
   list-style-type: none;
   position: sticky;
   background-color: #5BC0EB;
+  background-image: none;
   width: 100%;
   top: 0;
   left: 0;
