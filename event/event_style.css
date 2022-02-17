@@ -1,0 +1,173 @@
+@font-face { 
+  font-family: "smw2"; 
+  src: url(SMW2-Yoshis-Island.ttf) format("truetype"); 
+} 
+
+nav{
+  list-style-type: none;
+  position: fixed;
+  background-color: #7a16a6;
+  background-image: url("images/main_imgs/nav_bg.gif");
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.pageNav {
+  width: 160px;
+  background-color: #4723e8;
+  top: 90px;
+  margin-left: 10px;
+  padding: 10px;
+  border-style: ridge;
+  border-color: #3d26a3;
+  border-width: 8px;
+  border-radius: 15px;
+  background-image: url("images/main_imgs/orange-wave.gif");
+  background-attachment: fixed;
+}
+
+.navLink {
+  display: inline;
+  float: right;
+  padding: 20px;
+}
+
+.logo {
+  display: inline;
+  float: left;
+  padding-left: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #f3f0ff;
+  font-size: 30px;
+}
+
+p {
+  color: #fcb83a;
+}
+
+.navLink:hover {
+  background-color: #541270;
+  transition: 0.5s;
+}
+
+h1 {
+  font-family: "smw2", sans-serif;
+  font-size: 50px;
+  color : #f4501e;
+  text-shadow: 3px 3px #2a2054;
+  text-align: center;
+  font-weight: "normal";
+}
+
+h3 {
+  font-family: "smw2", sans-serif;
+  font-size: 30px;
+  color: #e8207c;
+  text-shadow: 2px 2px #2a2054;
+  text-decoration: overline;
+}
+
+h2{
+  font-family: "smw2", sans-serif;
+  font-size: 35px;
+  color: #f3f0ff;
+}
+
+li{
+  font-family: "smw2", sans-serif;
+  font-size: 25px;
+  color: #f3f0ff;
+}
+
+body {
+  /*background-color: #4723e8;*/
+  background-image: url("images/main_imgs/bg_img.gif");
+  background-attachment: fixed;
+}
+
+.smooth_img {
+  image-rendering: auto;
+}
+
+img {
+  image-rendering: pixelated;
+}
+
+#title {
+  font-family: "smw2", sans-serif;
+  background-color: #3d1fc2;
+  border-radius: 20px;
+  border-style: ridge;
+  border-color: #3d26a3;
+  border-width: 8px;
+  width: 60%;
+  margin-top: 100px;
+  
+}
+
+#tableDiv {
+  background-color: #3d1fc2;
+  background-image: url("images/main_imgs/orange-wave.gif");
+  background-attachment: fixed;
+  border-radius: 20px;
+  width: 60%;
+  /*position: absolute;*/
+  right: 15%;
+  top: 70%;
+  margin: auto;
+  margin-top: 150px;
+}
+
+#list {
+  background-color: #3d1fc2;
+  border-radius: 20px;
+  border-style: ridge;
+  border-color: #3d26a3;
+  border-width: 8px;
+  border-radius: 20px;
+  margin-top: 150px;
+  float: left;
+  top: 70%;
+  width: 250px;
+}
+
+#fruit {
+  border-radius: 5px;
+  border: 5px solid #f3f0ff;
+  border-collapse: collapse;
+  width: 100%;
+  text-align: left;
+}
+
+th, td {
+  font-family: "smw2", sans-serif;
+  border: 3px solid #f3f0ff;
+  font-size: 40px;
+  color: #f3f0ff;
+  
+}
+
+td {
+  font-size: 20px;
+  text-align: center;
+}
+
+.mario {
+  background-color: #c62828;
+  background-image: url("images/main_imgs/mario-bg.gif");
+}
+
+.convinceDiv {
+  font-family: "smw2", sans-serif;
+  color: #f3f0ff;
+  font-size: 25px;
+  background-color: #7a16a6;
+  background-image: url("images/main_imgs/bg_img.gif");
+  border: 2px solid blue;
+  border-radius: 20px;
+  display: block;
+}
