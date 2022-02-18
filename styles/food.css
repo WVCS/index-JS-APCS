@@ -1,6 +1,8 @@
+/* Restaurant styling */
+
 .restaurant{
   background-color: #201A23;
-  background-image: url('https://static.vecteezy.com/system/resources/thumbnails/002/173/386/small/wood-texture-background-free-vector.jpg');
+  background-image: url('images/main_imgs/wood-bg.gif');
 }
 
 .restaurantNav {
@@ -27,7 +29,7 @@
   display: inline;
   padding: 20px;
   /*float: right;*/
-  
+
 }
 
 .foodLink {
@@ -68,7 +70,7 @@
 .food_container {
   background-color: #201a23;
   display: grid;
-  width: 70%;
+  width: 75%;
   grid-gap: 30px;
   grid-template-columns: auto auto auto;
   border-radius: 10px;
