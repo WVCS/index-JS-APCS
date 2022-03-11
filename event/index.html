@@ -10,10 +10,10 @@
 <body>
   <nav>
      <li><a>Home</a></li>
-     <li><a>Tickets</a></li>
-     <li><a>About</a></li>
-     <li><a href=#find>Find it</a></li>
-     <li><a>Store</a></li>
+     <li><a href=#ticket_span>Tickets</a></li>
+     <li><a href=#about_span>About</a></li>
+     <li><a href=#find_it>Find it</a></li>
+     <li><a href=#store_span>Store</a></li>
   </nav>
   
   <!-- Display the countdown timer in an element -->
@@ -52,7 +52,7 @@ var x = setInterval(function() {
   
   <center>
   <div class="container">
-    <span class="about"><h2>About</h2>
+    <span ID="about_span" class="about"><h2>About</h2>
       <p>This has to be one of the most memorable and exciting events anyone could possibly witness, but what is it? Come visit the world's largest water faucet and wait and watch as exaclty one enormous drop of water falls from the spout. This once in a lifetime event will leave you absolutely astonished and in awe of how soaking wet you'll be when that drop finally drops.</p>
       <div>
         <img src="https://lh5.ggpht.com/-iRJF_kH_gmk/UB0OdEoXBpI/AAAAAAAAbRo/tHzwVlCO75c/magic-founain-4%25255B2%25255D.jpg?imgmax=800" style="height: 70vh;">
@@ -63,19 +63,18 @@ var x = setInterval(function() {
     
     <div style="width: 100%; height: 70vh; background-image: url(https://www.plumbinghelptoday.com/wp-content/uploads/the-history-of-the-faucet_61143a6086709.jpeg); background-repeat: no-repeat; background-size: cover; filter: blur(8px); -webkit-filter: blur(8px);">
     </div>
-    <span class="tickets"><h2>Tickets</h2>
+    <span ID="ticket_span" class="tickets"><h2>Tickets</h2>
       <p> Click here to find out how to get tickets.</p>
     </span>
-    <span class="store"><h2>Store</h2>
+    <span ID="store_span" class="store"><h2>Store</h2>
       <p> Click here to see our store where you can buy shirts, <br> keychains, mugs, hats, and more.</p>
     </span>
-    <span class="map">
-      <div ID="find" style="float: left;">
+    <span ID="find_it" class="map">
         <h2>Find it</h2>
       <p> Find where our giant water faucet is located!</p>
-        <img src="https://www.arch2o.com/wp-content/uploads/2012/05/Arch2O-magic-tap-fountains-around-the-world-1-2400x1502.jpg" style="height: 60vh;">
-      </div>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53656.1270275708!2d-117.17349788546983!3d32.805304065317934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80deaa612c04f40b%3A0x40c039039ddfd335!2sSplish%20Splash!5e0!3m2!1sen!2sus!4v1646867174330!5m2!1sen!2sus" width="600vw" height="600vw" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        
+        
+      <iframe ID="Gmap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53656.1270275708!2d-117.17349788546983!3d32.805304065317934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80deaa612c04f40b%3A0x40c039039ddfd335!2sSplish%20Splash!5e0!3m2!1sen!2sus!4v1646867174330!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </span>
   </div>
       </center>
