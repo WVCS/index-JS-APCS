@@ -42,13 +42,15 @@ h1 {
 
 h2 {
   padding: 1px;
-  width: 20%;
   color: #249DFC;
   background-color: #0E69CA;
   font-family: helvetica;
   border-radius: 10px;
-  font-size: 240%;
+  font-size: 200%;
   font-weight: 900;
+  text-align: center;
+  min-width: 40vw;
+  max-width: 50vw;
 }
 
 p {
@@ -102,11 +104,39 @@ span.map {
   margin-top: 10px;
 }
 
-#find {
-  width: 50%;
+#Gmap {
+  min-width: 50vw;
+  min-height: 50vh
 }
 
-@media only screen and (max-width: 1024px) {
+/* Tablet */
+@media only screen and (max-width: 1023px) {
   .container {
     flex-direction: column;
   }
+  
+  /* Mobile */
+  @media only screen and (max-width: 767px) {
+  .container {
+    flex-direction: column;
+  }
+    
+    li, a {
+  display: inline;
+  float: right;
+  padding: 5px;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  font-family: helvetica;
+  font-weight: bold;
+  color: white;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+p {
+  color: white;
+  padding: 15px;
+  font-family: helvetica;
+  font-weight: 15;
+  font-size: 20px;
+}
