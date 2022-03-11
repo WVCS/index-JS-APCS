@@ -75,7 +75,7 @@ span.about {
   width: 100%;
   z-index: 1;
   background-color: #1c469c;
-  background-image: url(../images/event_imgs/dropwave.gif);
+  background-image: url(../images/event_imgs/blue_drops.gif);
   
 }
 
@@ -83,7 +83,7 @@ span.tickets {
   display: inline-block;
   z-index: 1;
   background-color: #1c469c;
-  background-image: url(../images/event_imgs/dropwave.gif);
+  background-image: url(../images/event_imgs/blue_drops.gif);
   height: 60vh;
   width: 100%;
    margin-top: 10px;
@@ -93,7 +93,7 @@ span.store {
   display: inline-block;
   z-index: 1;
   background-color: #1c469c;
-  background-image: url(../images/event_imgs/dropwave.gif);
+  background-image: url(../images/event_imgs/blue_drops.gif);
   height: 60vh;
   width: 100%;
   margin-top: 10px;
@@ -104,7 +104,7 @@ span.map {
   width: 100%;
   z-index: 1;
   background-color: #1c469c;
-  background-image: url(../images/event_imgs/dropwave.gif);
+  background-image: url(../images/event_imgs/blue_drops.gif);
   margin-top: 10px;
 }
 
