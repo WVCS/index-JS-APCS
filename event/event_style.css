@@ -12,16 +12,16 @@ nav {
   z-index: 100;
 }
 
-li {
+li, a {
   display: inline;
   float: right;
-  padding: 20px;
+  padding: 10px;
   transition: background-color 0.5s ease, color 0.5s ease;
   font-family: helvetica;
   font-weight: bold;
   color: white;
   font-size: 25px;
-  
+  text-decoration: none;
 }
 
 li:hover {
@@ -78,19 +78,20 @@ span.about {
 
 span.tickets {
   display: inline-block;
-  width: 50%;
-  float: left;
   z-index: 1;
   background-color: #1c469c;
   height: 60vh;
+  width: 100%;
+   margin-top: 10px;
 }
 
 span.store {
   display: inline-block;
-  width: 50%;
   z-index: 1;
   background-color: #1c469c;
   height: 60vh;
+  width: 100%;
+  margin-top: 10px;
 }
 
 span.map {
@@ -98,8 +99,14 @@ span.map {
   width: 100%;
   z-index: 1;
   background-color: #1c469c;
+  margin-top: 10px;
 }
 
 #find {
   width: 50%;
 }
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+  }
