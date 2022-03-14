@@ -76,27 +76,25 @@ span.about {
   z-index: 1;
   background-color: #1c469c;
   background-image: url(../images/event_imgs/blue_drops.gif);
-  
 }
 
 span.tickets {
   display: inline-block;
   z-index: 1;
   background-color: #1c469c;
-  background-image: url(../images/event_imgs/blue_drops.gif);
   height: 60vh;
   width: 100%;
    margin-top: 10px;
+  background-image: url(../images/event_imgs/blue_drops.gif);
 }
 
 span.store {
   display: inline-block;
   z-index: 1;
   background-color: #1c469c;
-  background-image: url(../images/event_imgs/blue_drops.gif);
-  height: 60vh;
   width: 100%;
   margin-top: 10px;
+  background-image: url(../images/event_imgs/blue_drops.gif);
 }
 
 span.map {
@@ -104,13 +102,56 @@ span.map {
   width: 100%;
   z-index: 1;
   background-color: #1c469c;
-  background-image: url(../images/event_imgs/blue_drops.gif);
   margin-top: 10px;
+  background-image: url(../images/event_imgs/blue_drops.gif);
 }
 
 #Gmap {
   min-width: 50vw;
-  min-height: 50vh
+  min-height: 50vh;
+  max-width: 75vw;
+  max-height: 75vh;
+}
+
+.shop{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  
+  transform: translate(0%, -100%);
+  -ms-transform: translate(0%, -50%);
+  text-align: center;
+}
+
+.shopItem:hover .image {
+  opacity: 0.3;
+}
+
+.shopItem:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #47AFFF;
+  color: white;
+  font-size: 16px;
+  font-family: helvetica;
+  padding: 16px 24px;
 }
 
 /* Tablet */
@@ -144,3 +185,4 @@ p {
   font-weight: 15;
   font-size: 20px;
 }
+    
