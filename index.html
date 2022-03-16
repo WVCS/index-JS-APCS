@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="styles/desk.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="icon" href="images/desktop_imgs/windows-4.png">
   <title>Windows 98</title>
 </head>
@@ -40,6 +40,7 @@
         </li>
   </div>
   
+  <!-- Main Window -->
   <div ID="main" class="window">
     <div class="header"> My Desktop
       <img src="images/desktop_imgs/close-icon.png" style="background-color: #c6c6c6; padding: 0.5px; border-style: outset;
@@ -49,6 +50,7 @@
     </div>
     
     <div class="container">
+      <!-- "Applications" -->
       <li><a href="event/index.html">
       <div class="icon">
         <img src="images/desktop_imgs/world-3.png">
@@ -67,7 +69,7 @@
           
           <li><a href="convince.html">
         <div class="icon">
-        <img src="images/desktop_imgs/message_file-0.png">
+        <img src="images/desktop_imgs/message_file-0.png.png">
           Mario.txt
       </div>
             </a>
@@ -82,11 +84,25 @@
           </li>
       
       <li>
-        <div class="icon">
+        <div ondblclick="openWindow('image_viewer'); setImage('https://axisstudiosgroup.com/site/assets/files/14132/sackboy_axis_012-1.-full.jpg')" class="image_file">
         <img src="images/desktop_imgs/message_file-0.png">
-          text.txt
+          Sackboy.png
       </div>
           </li>
+      
+      <li>
+        <div ondblclick="openWindow('image_viewer'); setImage('https://nationaltoday.com/wp-content/uploads/2020/04/mario-day.jpg')" class="image_file">
+        <img src="images/desktop_imgs/message_file-0.png">
+          Mario_IRL.png
+      </div>
+      </li>
+      
+      <li>
+        <div ondblclick="openWindow('image_viewer'); setImage('https://nationaltoday.com/wp-content/uploads/2020/04/mario-day.jpg')" class="image_file">
+        <img src="images/desktop_imgs/message_file-0.png">
+          pizza.wav
+      </div>
+      </li>
     </div>
     
   </div>
@@ -97,9 +113,35 @@
     </div>
   </div>
   
+  <div ID="image_viewer" class="window">
+    <div ID="image_name" class="header"> Image
+      <img onclick="closeElmnt('image_viewer')" src="images/desktop_imgs/close-icon.png" style="background-color: #c6c6c6; padding: 0.5px; border-style: outset;
+  border-color: #efefef black black #efefef; border-width: 2px; float: right;">
+      <img src="images/desktop_imgs/question-icon.png" style="background-color: #c6c6c6; padding: 0.5px; border-style: outset;
+  border-color: #efefef black black #efefef; border-width: 2px; float: right; margin-right: 5px;">
+    </div>
+    <div class="container">
+      <img ID="picture" src="">
+    </div>
+  </div>
+  
   <script>
+  //Double click file:
+    
+function openWindow(elmntID){
+  document.getElementById(elmntID).style.opacity = 1;
+}
+    
+function closeElmnt(elmntID) {
+  document.getElementById(elmntID).style.opacity = 0;
+}
+    
+function setImage(imageURL) {
+  document.getElementById("picture").src = imageURL;
+}
   // Make the DIV element draggable:
 dragElement(document.getElementById("main"));
+dragElement(document.getElementById("image_viewer"));
 
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
