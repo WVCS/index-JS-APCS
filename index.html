@@ -85,21 +85,21 @@
       
       <li>
         <div ondblclick="openWindow('image_viewer'); setImage('https://axisstudiosgroup.com/site/assets/files/14132/sackboy_axis_012-1.-full.jpg')" class="image_file">
-        <img src="images/desktop_imgs/message_file-0.png">
+        <img src="images/desktop_imgs/kodak_imaging-0.png">
           Sackboy.png
       </div>
           </li>
       
       <li>
         <div ondblclick="openWindow('image_viewer'); setImage('https://nationaltoday.com/wp-content/uploads/2020/04/mario-day.jpg')" class="image_file">
-        <img src="images/desktop_imgs/message_file-0.png">
+        <img src="images/desktop_imgs/kodak_imaging-0.png">
           Mario_IRL.png
       </div>
       </li>
       
       <li>
-        <div ondblclick="openWindow('image_viewer'); setImage('https://nationaltoday.com/wp-content/uploads/2020/04/mario-day.jpg')" class="image_file">
-        <img src="images/desktop_imgs/message_file-0.png">
+        <div ondblclick="openWindow('song_player'); setSong('sounds/warble.ogg')" class="image_file">
+        <img src="images/desktop_imgs/cd_audio_cd_a-2.png">
           pizza.wav
       </div>
       </li>
@@ -113,6 +113,7 @@
     </div>
   </div>
   
+  <!-- Image Viewer -->
   <div ID="image_viewer" class="window">
     <div ID="image_name" class="header"> Image
       <img onclick="closeElmnt('image_viewer')" src="images/desktop_imgs/close-icon.png" style="background-color: #c6c6c6; padding: 0.5px; border-style: outset;
@@ -125,11 +126,34 @@
     </div>
   </div>
   
+    <!-- Song Player -->
+  <div ID="song_player" class="window">
+    <div ID="song_name" class="header"> Media Player
+      <img onclick="closeElmnt('song_player')" src="images/desktop_imgs/close-icon.png" style="background-color: #c6c6c6; padding: 0.5px; border-style: outset;
+  border-color: #efefef black black #efefef; border-width: 2px; float: right;">
+      <img src="images/desktop_imgs/question-icon.png" style="background-color: #c6c6c6; padding: 0.5px; border-style: outset;
+  border-color: #efefef black black #efefef; border-width: 2px; float: right; margin-right: 5px;">
+    </div>
+    <center>
+    <div ID="media_player" class="container">
+      
+      <div style="background-color: #c6c6c6; margin: auto; padding-top: 10%; padding-bottom: 10%; margin-bottom: 10%; border-style: inset; border-color: black #efefef #efefef black;">
+        
+      <img ID="disc" src="http://www.clker.com/cliparts/e/v/U/O/p/i/cd-dvd-hi.png">
+      </div>
+      <audio ID="song_controller" controls style="padding-bottom: 10%;">
+        <source src="" type="">
+      </audio>
+        </center>
+    </div>
+  </div>
+</div>
   <script>
   //Double click file:
     
 function openWindow(elmntID){
   document.getElementById(elmntID).style.opacity = 1;
+  document.getElementById(elmntID).style.left = 0;
 }
     
 function closeElmnt(elmntID) {
@@ -139,9 +163,24 @@ function closeElmnt(elmntID) {
 function setImage(imageURL) {
   document.getElementById("picture").src = imageURL;
 }
+    
+function setSong(songURL, fileType) {
+  var audio = document.getElementById("song_controller")
+  audio.source.src = songURL;
+  audio.source.type = fileType;
+}
+    
+  //Spin CD if audio is playing
+if (document.getElementById("song_controller").paused == false) {
+  document.getElementById("dic").style.animationPlayState = "play";
+} else {
+  document.getElementById("disc").style.animationPlayState = "paused";
+}
+    
   // Make the DIV element draggable:
 dragElement(document.getElementById("main"));
 dragElement(document.getElementById("image_viewer"));
+dragElement(document.getElementById("song_player"));
 
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
