@@ -4,6 +4,9 @@ body {
 
 .window {
   background-color: #c6c6c6;
+  border-style: outset;
+  border-color: #efefef black black #efefef;
+  border-width: 2px;
   display: flex;
   flex-flow: column;
 }
@@ -38,10 +41,7 @@ body {
 #main {
   width: 55%;
   margin: auto;
-  height: 80vh;
-  border-style: outset;
-  border-color: #efefef black black #efefef;
-  border-width: 2px;
+  height: 70vh;
   z-index: 2;
   position: absolute;
 }
@@ -118,13 +118,44 @@ li, a {
 }
 
 #image_viewer {
-  opacity: 0;
+  opacity: 1;
   width: 40%;
   z-index: 3;
   position: absolute;
+  left: -1000px;
 }
 
 #picture {
   width: 100%;
   height: auto;
+}
+
+#song_player {
+  opacity: 0;
+  width: 35%;
+  z-index: 3;
+  position: absolute;
+  left: -1000px;
+  top: 0;
+}
+
+#disc {
+  width: 85%;
+  height: auto;
+  image-rendering: pixelated;
+  animation: spin 0.5s infinite linear;
+  animation-play-state: paused;
+}
+
+@keyframes spin {
+  from {transform: rotate(359deg);}
+  to {transofrm: rotate(0deg);}
+}
+
+#media_player {
+  background-color: #c6c6c6;
+  border: none;
+  display: block;
+  width: 75%;
+  margin-top: 50px;
 }
