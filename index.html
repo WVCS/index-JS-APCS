@@ -171,11 +171,13 @@ function setSong(songURL, fileType) {
 }
     
   //Spin CD if audio is playing
-if (document.getElementById("song_controller").paused == false) {
+document.getElementById("song_controller").addEventListener("play",function(){
   document.getElementById("disc").style.animationPlayState = "play";
-} else {
+});
+    
+document.getElementById("song_controller").addEventListener("pause",function(){
   document.getElementById("disc").style.animationPlayState = "paused";
-}
+});
     
   // Make the DIV element draggable:
 dragElement(document.getElementById("main"));
