@@ -142,7 +142,7 @@
       <img ID="disc" src="http://www.clker.com/cliparts/e/v/U/O/p/i/cd-dvd-hi.png">
       </div>
       <audio ID="song_controller" controls style="padding-bottom: 10%;">
-        <source src="" type="">
+        <source ID="audio_source" src="" type="">
       </audio>
         </center>
     </div>
@@ -165,7 +165,7 @@ function setImage(imageURL) {
 }
     
 function setSong(songURL, fileType) {
-  var audio = document.getElementById("song_controller")
+  var audio = document.getElementById("audio_source")
   audio.source.src = songURL;
   audio.source.type = fileType;
 }
