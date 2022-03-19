@@ -170,14 +170,15 @@ function setSong(songURL, fileType) {
   audio.source.type = fileType;
 }
     
-  //Spin CD if audio is playing
-document.getElementById("song_controller").addEventListener("play",function(){
-  document.getElementById("disc").style.animationPlayState = "play";
-});
+  //play spin anim for CD
+    function spinCd(state) {
+      document.getElementById("disc").style.animationPlayState = state;
+    }
     
-document.getElementById("song_controller").addEventListener("pause",function(){
-  document.getElementById("disc").style.animationPlayState = "paused";
-});
+  //Spin CD if audio is playing
+document.getElementById("song_controller").addEventListener("play", spinCd("play"));
+    
+document.getElementById("song_controller").addEventListener("pause", spinCd("paused"));
     
   // Make the DIV element draggable:
 dragElement(document.getElementById("main"));
