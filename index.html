@@ -141,7 +141,7 @@
         
       <img ID="disc" src="http://www.clker.com/cliparts/e/v/U/O/p/i/cd-dvd-hi.png">
       </div>
-      <audio ID="song_controller" controls style="padding-bottom: 10%;" onplay = "spinCd('play')" onpause = "spinCd('pause')">
+      <audio ID="song_controller" controls style="padding-bottom: 10%;">
         <source ID="audio_source" src="sounds/test_song.mp3" type="audio/mp3">
       </audio>
         </center>
@@ -171,9 +171,13 @@ function setSong(songURL, fileType) {
 }
     
   //play spin anim for CD
-    function spinCd(state) {
-      document.getElementById("disc").style.animationPlayState = state;
-    }
+    document.getElementById("song_controller").addEventListener('play', function() {
+      document.getElementById("disc").style.animationPlayState = 'play';
+    });
+    
+    document.getElementById("song_controller").addEventListener('pause', function() {
+      document.getElementById("disc").style.animationPlayState = 'paused';
+    });
     
   // Make the DIV element draggable:
 dragElement(document.getElementById("main"));
