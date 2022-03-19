@@ -142,7 +142,7 @@
       <img ID="disc" src="http://www.clker.com/cliparts/e/v/U/O/p/i/cd-dvd-hi.png">
       </div>
       <audio ID="song_controller" controls style="padding-bottom: 10%;">
-        <source ID="audio_source" src="sounds/warble.ogg" type="audio/ogg">
+        <source ID="audio_source" src="sounds/test_song.mp3" type="audio/mp3">
       </audio>
         </center>
     </div>
@@ -172,7 +172,7 @@ function setSong(songURL, fileType) {
     
   //Spin CD if audio is playing
 if (document.getElementById("song_controller").paused == false) {
-  document.getElementById("dic").style.animationPlayState = "play";
+  document.getElementById("disc").style.animationPlayState = "play";
 } else {
   document.getElementById("disc").style.animationPlayState = "paused";
 }
