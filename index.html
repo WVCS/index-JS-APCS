@@ -98,7 +98,7 @@
       </li>
       
       <li>
-        <div ondblclick="openWindow('song_player')" class="image_file">
+        <div ondblclick="openWindow('song_player'); setSong('test_song.mp3', 'mp3')" class="image_file">
         <img src="images/desktop_imgs/cd_audio_cd_a-2.png">
           pizza.wav
       </div>
@@ -129,7 +129,7 @@
     <!-- Song Player -->
   <div ID="song_player" class="window">
     <div ID="song_name" class="header"> Media Player
-      <img onclick="closeElmnt('song_player')" src="images/desktop_imgs/close-icon.png" style="background-color: #c6c6c6; padding: 0.5px; border-style: outset;
+      <img onclick="closeElmnt('song_player'); stopSong('song_controller')" src="images/desktop_imgs/close-icon.png" style="background-color: #c6c6c6; padding: 0.5px; border-style: outset;
   border-color: #efefef black black #efefef; border-width: 2px; float: right;">
       <img src="images/desktop_imgs/question-icon.png" style="background-color: #c6c6c6; padding: 0.5px; border-style: outset;
   border-color: #efefef black black #efefef; border-width: 2px; float: right; margin-right: 5px;">
@@ -137,12 +137,20 @@
     <center>
     <div ID="media_player" class="container">
       
-      <div style="background-color: #c6c6c6; margin: auto; padding-top: 10%; padding-bottom: 10%; margin-bottom: 10%; border-style: inset; border-color: black #efefef #efefef black;">
+      <div style="background-color: #c6c6c6; margin: auto; padding-top: 10%; padding-bottom: 10%; margin-bottom: 5%; border-style: inset; border-color: black #efefef #efefef black;">
         
       <img ID="disc" src="http://www.clker.com/cliparts/e/v/U/O/p/i/cd-dvd-hi.png">
       </div>
-      <audio ID="song_controller" controls style="padding-bottom: 10%;">
-        <source ID="audio_source" src="sounds/test_song.mp3" type="audio/mp3">
+      <div ID="progress">
+        <div ID="bar"></div>
+      </div>
+      <div ID="buttons">
+        <img ID="play" style="" width="46px" height="44px" onclick="toggleAudio('song_controller')">
+        <img ID="stop" style="" width="46px" height="44px" onclick="stopSong('song_controller')">
+        <img ID="restart" style="" width="46px" height="44px" onclick="document.getElementById('song_controller').currentTime = 0">
+      </div>
+      <audio ID="song_controller" style="padding-bottom: 10%;" ontimeupdate="updateBar()">
+        <source ID="audio_source" src="" type="">
       </audio>
         </center>
     </div>
@@ -165,9 +173,10 @@ function setImage(imageURL) {
 }
     
 function setSong(songURL, fileType) {
-  var audio = document.getElementById("audio_source")
-  audio.source.src = songURL;
-  audio.source.type = fileType;
+  var audio = document.getElementById("audio_source");
+  audio.src = songURL;
+  audio.type = 'audio/' + fileType;
+  document.getElementById("song_controller").load();
 }
     
   //play spin anim for CD
@@ -179,6 +188,31 @@ function setSong(songURL, fileType) {
       document.getElementById("disc").style.animationPlayState = 'paused';
     });
     
+  //toggle play pause
+  function toggleAudio(element){
+    var song = document.getElementById(element);
+    if (song.paused == true) {
+      song.play();
+      document.getElementById("play").style.backgroundColor = "green";
+    } else {
+      song.pause();
+      document.getElementById("play").style.backgroundColor = "blue";
+    }
+  }
+    
+  //start stop and pause song
+  function stopSong(element) {
+    document.getElementById(element).pause();
+    document.getElementById(element).currentTime = 0;
+  }
+    
+  //song progress bar
+  var audio = document.getElementById("song_controller")
+  function updateBar() {
+    var prog = 100*(audio.currentTime/audio.duration);
+    document.getElementById("bar").style.width = prog + '%';
+  }
+  
   // Make the DIV element draggable:
 dragElement(document.getElementById("main"));
 dragElement(document.getElementById("image_viewer"));
