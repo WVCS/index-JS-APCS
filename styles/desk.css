@@ -25,6 +25,20 @@ body {
   flex-flow: row;
 }
 
+#time {
+  float: right;
+  margin: 2px;
+  padding: 1px;
+  width: 55px;
+  height: 20px;
+  background-color: #c6c6c6;
+  border-style: inset;
+  border-color: black #efefef #efefef black;
+  border-width: 2px;
+  font-size: 15px;
+  text-align: center;
+}
+
 #start {
   float: left;
   margin: 2px;
@@ -175,14 +189,15 @@ li, a {
   height: 100%;
 }
 
-#play {
-  background-color: blue;
+#mario_game {
+  opacity: 1;
+  width: 40%;
+  z-index: 3;
+  position: absolute;
+  left: -1000px;
 }
 
-#stop {
-  background-color: red;
-}
-
-#restart {
-  background-color: yellow;
+#game {
+  width: 800px;
+  height: 450px;
 }
