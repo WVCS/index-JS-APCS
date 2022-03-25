@@ -8,7 +8,7 @@
   <link rel="icon" href="images/desktop_imgs/windows-4.png">
   <title>Windows 98</title>
 </head>
-<body>
+<body onload="startTime()">
   
   <div ID="desktop">
     <li>
@@ -98,9 +98,16 @@
       </li>
       
       <li>
-        <div ondblclick="openWindow('song_player'); setSong('sounds/test_song.mp3', 'mp3')" class="image_file">
+        <div ondblclick="openWindow('song_player')" class="image_file">
         <img src="images/desktop_imgs/cd_audio_cd_a-2.png">
           pizza.wav
+      </div>
+      </li>
+      
+      <li>
+        <div ondblclick="openWindow('mario_game'); setGame('https://games.construct.net/769/latest')" class="image_file">
+        <img src="images/desktop_imgs/mario_icon.png">
+          Mario game
       </div>
       </li>
     </div>
@@ -110,6 +117,8 @@
   <div ID="task">
     <div ID="start">
       <img src="images/desktop_imgs/windows-4.png" style="padding-right: 3px;">Start
+    </div>
+    <div ID="time" style="">
     </div>
   </div>
   
@@ -123,6 +132,19 @@
     </div>
     <div class="container">
       <img ID="picture" src="">
+    </div>
+  </div>
+  
+  <!-- Mario Game -->
+  <div ID="mario_game" class="window">
+    <div class="header"> Super Mario
+      <img onclick="closeElmnt('mario_game')" src="images/desktop_imgs/close-icon.png" style="background-color: #c6c6c6; padding: 0.5px; border-style: outset;
+  border-color: #efefef black black #efefef; border-width: 2px; float: right;">
+      <img src="images/desktop_imgs/question-icon.png" style="background-color: #c6c6c6; padding: 0.5px; border-style: outset;
+  border-color: #efefef black black #efefef; border-width: 2px; float: right; margin-right: 5px;">
+    </div>
+    <div class="container">
+      <iframe ID="game" allow="fullscreen; autoplay; encrypted-media" src="" frameborder="0" allowfullscreen="true" msallowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" allowpaymentrequest="false" referrerpolicy="unsafe-url" sandbox="allow-same-origin allow-forms allow-scripts allow-pointer-lock allow-orientation-lock allow-popups" scrolling="no"></iframe>
     </div>
   </div>
   
@@ -145,12 +167,10 @@
         <div ID="bar"></div>
       </div>
       <div ID="buttons">
-        <img ID="play" style="" width="46px" height="44px" onclick="toggleAudio('song_controller')">
-        <img ID="stop" style="" width="46px" height="44px" onclick="stopSong('song_controller')">
-        <img ID="restart" style="" width="46px" height="44px" onclick="document.getElementById('song_controller').currentTime = 0">
+        <img ID="play" style="" width="23px" height="22px">
       </div>
       <audio ID="song_controller" style="padding-bottom: 10%;" ontimeupdate="updateBar()">
-        <source ID="audio_source" src="" type="">
+        <source ID="audio_source" src="https://vgmsite.com/soundtracks/nicktoons-attack-of-the-toybots-ds-gamerip/pcuutgiata/05%20St01.mp3" type="audio/mp3">
       </audio>
         </center>
     </div>
@@ -161,23 +181,26 @@
     
 function openWindow(elmntID){
   document.getElementById(elmntID).style.opacity = 1;
-  document.getElementById(elmntID).style.left = '0px';
+  document.getElementById(elmntID).style.left = 0;
 }
     
 function closeElmnt(elmntID) {
   document.getElementById(elmntID).style.opacity = 0;
-  document.getElementById(elmntID).style.left = '-1000px';
 }
     
 function setImage(imageURL) {
   document.getElementById("picture").src = imageURL;
 }
     
+function setGame(gameURL) {
+  var game = document.getElementById("game");
+  game.src = gameURL;
+}
+    
 function setSong(songURL, fileType) {
-  var audio = document.getElementById("audio_source");
-  audio.src = songURL;
-  audio.type = 'audio/' + fileType;
-  document.getElementById("song_controller").load();
+  var audio = document.getElementById("audio_source")
+  audio.source.src = songURL;
+  audio.source.type = fileType;
 }
     
   //play spin anim for CD
@@ -188,18 +211,6 @@ function setSong(songURL, fileType) {
     document.getElementById("song_controller").addEventListener('pause', function() {
       document.getElementById("disc").style.animationPlayState = 'paused';
     });
-    
-  //toggle play pause
-  function toggleAudio(element){
-    var song = document.getElementById(element);
-    if (song.paused == true) {
-      song.play();
-      document.getElementById("play").style.backgroundColor = "green";
-    } else {
-      song.pause();
-      document.getElementById("play").style.backgroundColor = "blue";
-    }
-  }
     
   //start stop and pause song
   function stopSong(element) {
@@ -218,6 +229,7 @@ function setSong(songURL, fileType) {
 dragElement(document.getElementById("main"));
 dragElement(document.getElementById("image_viewer"));
 dragElement(document.getElementById("song_player"));
+dragElement(document.getElementById("mario_game"));
 
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
@@ -258,6 +270,39 @@ function dragElement(elmnt) {
     document.onmouseup = null;
     document.onmousemove = null;
   }
+}
+    
+    function startTime() {
+  const today = new Date();
+  let h = today.getHours();
+  let m = today.getMinutes();
+  let s = today.getSeconds();
+  let meridian = getMeridian(h);
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('time').innerHTML =  getDisplayedHour(h) + ":" + m + " " + meridian;
+  setTimeout(startTime, 1000);
+}
+
+function getDisplayedHour(hour) {
+  if (hour > 12) {
+    return hour - 12;
+  }else {
+    return hour;
+  }
+}
+    
+function getMeridian(hour) {
+  if (hour > 12) {
+    return 'PM';
+  }else {
+    return 'AM';
+  }
+}
+
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
 }
   </script>
 </body>
