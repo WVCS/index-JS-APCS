@@ -189,6 +189,18 @@ li, a {
   height: 100%;
 }
 
+#play {
+  background-color: blue;
+}
+
+#stop {
+  background-color: red;
+}
+
+#restart {
+  background-color: yellow;
+}
+
 #mario_game {
   opacity: 1;
   width: 40%;
