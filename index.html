@@ -8,7 +8,7 @@
   <link rel="icon" href="images/desktop_imgs/windows-4.png">
   <title>Windows 98</title>
 </head>
-<body onload="startTime()">
+<body>
   
   <div ID="desktop">
     <li>
@@ -98,7 +98,7 @@
       </li>
       
       <li>
-        <div ondblclick="openWindow('song_player')" class="image_file">
+        <div ondblclick="openWindow('song_player'); setSong('sounds/test_song.mp3', 'mp3')" class="image_file">
         <img src="images/desktop_imgs/cd_audio_cd_a-2.png">
           pizza.wav
       </div>
@@ -106,10 +106,11 @@
       
       <li>
         <div ondblclick="openWindow('mario_game'); setGame('https://games.construct.net/769/latest')" class="image_file">
-        <img src="images/desktop_imgs/mario_icon.png">
+        <img src="images/desktop_imgs/cd_audio_cd_a-2.png">
           Mario game
       </div>
       </li>
+      
     </div>
     
   </div>
@@ -167,10 +168,12 @@
         <div ID="bar"></div>
       </div>
       <div ID="buttons">
-        <img ID="play" style="" width="23px" height="22px">
+        <img ID="play" style="" width="46px" height="44px" onclick="toggleAudio('song_controller')">
+        <img ID="stop" style="" width="46px" height="44px" onclick="stopSong('song_controller')">
+        <img ID="restart" style="" width="46px" height="44px" onclick="document.getElementById('song_controller').currentTime = 0">
       </div>
       <audio ID="song_controller" style="padding-bottom: 10%;" ontimeupdate="updateBar()">
-        <source ID="audio_source" src="https://vgmsite.com/soundtracks/nicktoons-attack-of-the-toybots-ds-gamerip/pcuutgiata/05%20St01.mp3" type="audio/mp3">
+        <source ID="audio_source" src="" type="">
       </audio>
         </center>
     </div>
@@ -181,11 +184,12 @@
     
 function openWindow(elmntID){
   document.getElementById(elmntID).style.opacity = 1;
-  document.getElementById(elmntID).style.left = 0;
+  document.getElementById(elmntID).style.left = '0px';
 }
     
 function closeElmnt(elmntID) {
   document.getElementById(elmntID).style.opacity = 0;
+  document.getElementById(elmntID).style.left = '-1000px';
 }
     
 function setImage(imageURL) {
@@ -198,9 +202,10 @@ function setGame(gameURL) {
 }
     
 function setSong(songURL, fileType) {
-  var audio = document.getElementById("audio_source")
-  audio.source.src = songURL;
-  audio.source.type = fileType;
+  var audio = document.getElementById("audio_source");
+  audio.src = songURL;
+  audio.type = 'audio/' + fileType;
+  document.getElementById("song_controller").load();
 }
     
   //play spin anim for CD
@@ -211,6 +216,18 @@ function setSong(songURL, fileType) {
     document.getElementById("song_controller").addEventListener('pause', function() {
       document.getElementById("disc").style.animationPlayState = 'paused';
     });
+    
+  //toggle play pause
+  function toggleAudio(element){
+    var song = document.getElementById(element);
+    if (song.paused == true) {
+      song.play();
+      document.getElementById("play").style.backgroundColor = "green";
+    } else {
+      song.pause();
+      document.getElementById("play").style.backgroundColor = "blue";
+    }
+  }
     
   //start stop and pause song
   function stopSong(element) {
@@ -272,7 +289,7 @@ function dragElement(elmnt) {
   }
 }
     
-    function startTime() {
+function startTime() {
   const today = new Date();
   let h = today.getHours();
   let m = today.getMinutes();
