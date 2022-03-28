@@ -16,13 +16,15 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 30px;
+  height: 35px;
   background-color: #c6c6c6;
   border-style: outset;
   border-color: #efefef black black #efefef;
   border-width: 2px;
-  display: flex;
-  flex-flow: row;
+  box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  list-style-type: none;
 }
 
 #time {
@@ -187,18 +189,6 @@ li, a {
   background-color: green;
   
   height: 100%;
-}
-
-#play {
-  background-color: blue;
-}
-
-#stop {
-  background-color: red;
-}
-
-#restart {
-  background-color: yellow;
 }
 
 #mario_game {
