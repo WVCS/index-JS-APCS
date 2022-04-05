@@ -1,0 +1,242 @@
+@font-face{
+  font-family: "KP9";
+  src: url(KoopaParty9-Regular.ttf) format('truetype');
+}
+
+body {
+  background-color: #fce200;
+}
+
+#header{
+  background-color: white;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex-grid;
+  flex-direction: column;
+}
+
+#top_banner {
+  width: 100%;
+  height: 30vh;
+  top: 0;
+  left: 0;
+  background-image: url("https://media-exp1.licdn.com/dms/image/C4E1BAQFDlLZlu0eSSQ/company-background_10000/0/1603209012096?e=2147483647&v=beta&t=3C4XYHMw7xoM0sKHpFCwgca2xJ2v02tTV0s7xuHtpFY");
+  background-size: cover;
+}
+
+#grass {
+  background-image: url("https://github.com/WVCS/index-JS-APCS/blob/main/images/group_site/grass_decor.png?raw=true");
+  background-repeat: repeat-x;
+  width: 100%;
+  height: 100px;
+  
+  top: 30%;
+  left: 0;
+  z-index: 1;
+}
+
+#dirt {
+  background-image: url("https://github.com/WVCS/index-JS-APCS/blob/main/images/group_site/ground_bg.png?raw=true");
+  
+  position: relative;
+  left: 0;
+  width: 100%;
+  height: 40vh;
+}
+
+#dirt::before{
+  content: '';
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  display: block;
+  background: linear-gradient(-45deg, transparent 33.33%, #fce200 33.33%, #fce200 66.66%, transparent 66.66%),
+    linear-gradient(45deg, transparent 33.33%, #fce200 33.33%, #fce200 66.66%, transparent 66.66%);
+  background-size: 100px 200px;
+}
+
+#main{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+#dirt2 {
+  background-image: linear-gradient(rgba(44, 39, 30, .4), rgba(44, 39, 30, .8)),
+    url("https://github.com/WVCS/index-JS-APCS/blob/main/images/group_site/ground_bg.png?raw=true");
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 30vh;
+}
+
+#dirt2::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  display: block;
+  background: linear-gradient(-45deg, transparent 33.33%, #fce200 33.33%, #fce200 66.66%, transparent 66.66%),
+    linear-gradient(45deg, transparent 33.33%, #fce200 33.33%, #fce200 66.66%, transparent 66.66%);
+  background-size: 100px 200px;
+  transform: rotateX(180deg);
+}
+
+#dirt2::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  display: block;
+  background: linear-gradient(-45deg, transparent 33.33%, #2C271E 33.33%, #2C271E 66.66%, transparent 66.66%),
+    linear-gradient(45deg, transparent 33.33%, #2C271E 33.33%, #2C271E 66.66%, transparent 66.66%);
+  background-size: 100px 200px;
+}
+
+#dirt3 {
+  background-image: linear-gradient(rgba(44, 39, 30, .8), rgba(44, 39, 30, .8)),
+    url("https://github.com/WVCS/index-JS-APCS/blob/main/images/group_site/ground_bg.png?raw=true");
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 30vh;
+}
+
+#dirt3::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  display: block;
+  background: linear-gradient(-45deg, transparent 33.33%, #2C271E 33.33%, #2C271E 66.66%, transparent 66.66%),
+    linear-gradient(45deg, transparent 33.33%, #2C271E 33.33%, #2C271E 66.66%, transparent 66.66%);
+  background-size: 100px 200px;
+  transform: rotateX(180deg);
+}
+
+#dirt3::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  display: block;
+  background: linear-gradient(-45deg, transparent 33.33%, #2C271E 33.33%, #2C271E 66.66%, transparent 66.66%),
+    linear-gradient(45deg, transparent 33.33%, #2C271E 33.33%, #2C271E 66.66%, transparent 66.66%);
+  background-size: 100px 200px;
+}
+
+.container{
+  position: absolute;
+  top: 70%;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  margin-top: 150px;
+  display: flex-grid;
+  flex-direction: column;
+}
+
+.info1{
+  position: relative;
+  margin-bottom: 10%;
+  margin-top: 10%;
+  width: 70%;
+  border-radius: 50px;
+  background-image: linear-gradient(rgba(224, 67, 65, .6), rgba(224, 67, 65, .6)),
+    url("https://github.com/WVCS/index-JS-APCS/blob/main/images/group_site/terrain.png?raw=true");
+  border: 10px solid #e04341;
+}
+
+.info2{
+  position: relative;
+  width: 100%;
+  background-image: linear-gradient(#2C271E, black, #2C271E);
+}
+
+h1{
+  text-align: center;
+  color: white;
+  font-family: "KP9", sans-serif;
+  font-size: 6vw;
+  margin-top: 5px;
+}
+
+.char_img{
+  position: absolute;
+}
+
+#cptnT1{
+  width: 35%;
+  z-index: 2;
+  transform: translate(-30%,-88%);
+}
+
+#tdtte1{
+  width: 30%;
+  z-index: 1;
+  transform: translate(-60%,10%);
+}
+
+#brigade1{
+  width: 50%;
+  z-index: 1;
+  transform: translate(90%, -103%);
+}
+
+p{
+  font-family: sans-serif;
+}
+
+#characters{
+  width: 100%;
+  height: 50vh;
+  display: grid;
+  align-items: center;
+  justify-content: space-evenly;
+  grid-template-columns: 30% 30% 30%;
+  grid-template-rows: auto auto auto;
+}
+
+.cell {
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+  font-family: helvetica;
+  color: white;
+}
+
+.a{
+  grid-row: 1 / span 3;
+  background-color: #e04341;
+}
+
+.b{
+  grid-row: 1 / span 3;
+  background-color: #FF859D;
+}
+
+.c{
+  background-color: #2A78CB;
+}
+
+.d{
+  background-color: #29DA37;
+}
+
+.e{
+  background-color: #FFE70A;
+}
