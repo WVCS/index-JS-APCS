@@ -6,6 +6,7 @@
 @font-face{
   font-family: "delfino";
   src: url(../fonts/Delfino.ttf) format('truetype');
+}
 
 body {
   background-color: #fce200;
