@@ -11,7 +11,10 @@
   <div ID="header">
     <audio id="my_audio" src="media/toad_intro.wav" type="audio/wav"></audio>
   <nav ID="navbar">
-    <li class="navLink"><a href="https://google.com"> Home </a></li>
+    <li>
+      <img ID="bannerImg" src="https://github.com/WVCS/index-JS-APCS/blob/main/group/media/group_site/nav_banner.png?raw=true">
+    </li>
+    <li class="navLink"><a href="../index.html"> Home </a></li>
     <li>
     <div class="dropdown">
   <button onclick="myFunction()" class="dropbtn">Menu</button>
@@ -19,13 +22,9 @@
     <a href="#main">Main</a>
     <a href="#dirt2">Members</a>
     <a href="#dirt3">Adventures</a>
+    <a href="#tools">Tools</a>
   </div>
 </div>
-    </li>
-    <li>
-      <center>
-      <img ID="bannerImg" src="https://github.com/WVCS/index-JS-APCS/blob/main/group/media/group_site/nav_banner.png?raw=true" class="char_img">
-      </center>
     </li>
     </nav>
   <div ID="top_banner"></div>
@@ -40,7 +39,11 @@
   </div>
 <body>
   <div ID="main">
-        
+   <button ID="top" onclick="returnToTop()">
+     <h3>
+       Top
+     </h3>
+     </button>     
   <div class="info1">
     <img ID="cptnT1" class="char_img" src="https://github.com/WVCS/index-JS-APCS/blob/main/group/media/group_site/captain_toad1.png?raw=true">
     <img ID="tdtte1" class="char_img" src="https://github.com/WVCS/index-JS-APCS/blob/main/group/media/group_site/toadette1.png?raw=true">
@@ -183,6 +186,23 @@ Of the Toad Brigade, Blue Toad is shown to be the smartest of the five Toads and
   
   window.onload = function() {
     document.getElementById("my_audio").play();
+}
+  
+  function returnToTop(){
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+function hideFunction(){
+  if (document.body.scrollTop > '500' || document.documentElement.scrollTop > '500'){
+    document.getElementById("top").style.display = "block";
+  }else{
+    document.getElementById("top").style.display = "none";
+  }
+}
+
+window.onscroll = function(){
+  hideFunction();
 }
   
   /* When the user clicks on the button,
