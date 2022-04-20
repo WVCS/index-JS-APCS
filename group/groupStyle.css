@@ -8,8 +8,17 @@
   src: url(../fonts/Delfino.ttf) format('truetype');
 }
 
+::-webkit-scrollbar {
+    background: #f7b100;
+}
+
+::-webkit-scrollbar-thumb {
+    background: darkOrange;
+    border-radius: 15px;
+}
+
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; cursor:url("https://github.com/WVCS/index-JS-APCS/blob/main/group/media/group_site/Mario_Cursor.png?raw=true"),  default;
 }
 
 body {
@@ -38,6 +47,7 @@ a {
   color: white;
   font-size: 40px;
   font-family: "KP9", sans-serif;
+  cursor:url("https://github.com/WVCS/index-JS-APCS/blob/main/group/media/group_site/Mario_Cursor.png?raw=true"),  default;
 }
 
 .navLink:hover {
@@ -260,8 +270,7 @@ a {
   animation-timing-function: linear;
 }
 
-#top:hover{
-  cursor: pointer;
+button:hover{ cursor:url("https://github.com/WVCS/index-JS-APCS/blob/main/group/media/group_site/Mario_Cursor.png?raw=true"),  default;
 }
 
 .info1{
