@@ -95,6 +95,7 @@ a {
 #logo{
   z-index: 4;
   width: 40vw;
+  min-width: 300px;
   position: absolute;
   transform: translate(-50%, -40%)
 }
@@ -314,12 +315,14 @@ h3{
 
 #cptnT1{
   width: 35%;
+  min-width: 60px;
   z-index: 2;
   transform: translate(-30%,-88%);
 }
 
 #cptnT2{
   width: 8vw;
+  min-width: 10px;
   z-index: 2;
   left: 0;
   transform: translate(-20%, -60%)
@@ -333,6 +336,7 @@ h3{
 
 #tdtte2{
   width: 9vw;
+  min-width: 40px;
   z-index: 2;
   left: 0;
   transform: translate(-25%, -64%)
@@ -352,6 +356,7 @@ h3{
 
 #bToad{
   width: 5vw;
+  min-width: 30px;
   z-index: 2;
   left: 0;
   transform: translate(-40%, -30%);
@@ -359,7 +364,7 @@ h3{
 
 #brigade2{
   transform: translate(-50%, -50%);
-  
+  min-width: 200px;
   width: 30%;
 }
 
@@ -375,6 +380,10 @@ p, td{
   font-family: "delfino", sans-serif;
   text-align: left;
   font-weight: 1;
+}
+
+td{
+  font-size: 20px;
 }
 
 #characters{
@@ -399,11 +408,13 @@ p, td{
 .a{
   grid-row: 1 / span 3;
   background-color: #e04341;
+  margin-bottom: 5vh;
 }
 
 .b{
   grid-row: 1 / span 3;
   background-color: #FF859D;
+  margin-bottom: 5vh;
 }
 
 .c{
@@ -455,17 +466,17 @@ td {
 }
 
 .slider {
-        width: 500px;;
-        height: 300px;
+        width: 50vw;
+        height: 400px;
         background-color: yellow;
         margin: 100px auto 100px auto;
         text-align: center;
         overflow: hidden;
       }
       .image-container {
-        width:5000px;
+        width:500vw;
         background-color: pink;
-        height: 300px;
+        height: 400px;
         clear: both;
         position: relative;
         -webkit-transition: left 2s;
@@ -478,36 +489,38 @@ td {
         margin: 0px;
         padding: 0px;
         position: relative;
+        width: 50vw;
+        height: 400px;
       }
       #slide-1:target ~ .image-container {
         left: 0px;
       }
       #slide-2:target ~ .image-container {
-        left: -500px;
+        left: -50vw;
       }
       #slide-3:target ~ .image-container {
-        left: -1000px;
+        left: -100vw;
       }
       #slide-4:target ~ .image-container {
-        left: -1500px;
+        left: -150vw;
       }
       #slide-5:target ~ .image-container {
-        left: -2000px;
+        left: -200vw;
       }
       #slide-6:target ~ .image-container {
-        left: -2500px;
+        left: -250vw;
       }
       #slide-7:target ~ .image-container {
-        left: -3000px;
+        left: -300vw;
       }
       #slide-8:target ~ .image-container {
-        left: -3500px;
+        left: -350vw;
       }
       #slide-9:target ~ .image-container {
-        left: -4000px;
+        left: -400vw;
       }
       #slide-10:target ~ .image-container {
-        left: -4500px;
+        left: -450vw;
       }
       .buttons {
         position: relative;
@@ -520,3 +533,39 @@ td {
         border-radius: 50px;
         background-color: lightgreen;
       }
+
+@media only screen and (max-width: 1024px) {
+  #characters{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  h1{
+    font-size: 50px;
+  }
+  
+  .slide{
+    height: 200px;
+  }
+  
+  .image-container{
+    height: 200px;
+  }
+  
+  .slider{
+    height: 200px;
+  }
+  
+  text1{
+  font-weight: 1;
+  font-size: 10px;
+  }
+  
+  td{
+    font-size: 3vw;
+  }
+  
+  #cptnT2, #tdtte2{
+    width: 40px;
+  }
+}
