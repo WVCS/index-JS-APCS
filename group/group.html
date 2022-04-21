@@ -11,7 +11,6 @@
 <body>
   <div ID="header">
     <audio id="my_audio" src="media/toad_intro.wav" type="audio/wav"></audio>
-    <div ID="nav-container">
   <nav ID="navbar">
     <li>
       <img ID="bannerImg" src="https://github.com/WVCS/index-JS-APCS/blob/main/group/media/group_site/nav_banner.png?raw=true">
@@ -29,14 +28,14 @@
 </div>
     </li>
     </nav>
-    </div>
-  <div ID="top_banner">
-    <img src="https://github.com/WVCS/index-JS-APCS/blob/main/group/media/group_site/sky_banner.jpg?raw=true">
-  </div>
+  <div ID="top_banner"></div>
   
   <div ID="dirt">
     <div ID="grass">
       <center>
+        <img ID="bannerToad" src="https://github.com/WVCS/index-JS-APCS/blob/main/group/media/group_site/IMG_1593.PNG?raw=true" class="char_img">
+        <img ID="shy1" src="https://github.com/WVCS/index-JS-APCS/blob/main/group/media/group_site/IMG_1594.PNG?raw=true" class="char_img">
+        <img ID="shy2" src="https://github.com/WVCS/index-JS-APCS/blob/main/group/media/group_site/IMG_1596.PNG?raw=true" class="char_img">
       <img ID="logo" src="https://github.com/WVCS/index-JS-APCS/blob/main/group/media/group_site/Brigade_logo.png?raw=true">
       </center>
     </div>
@@ -229,20 +228,5 @@ window.onclick = function(event) {
     }
   }
 }
-  
-  // Initial state
-var scrollPos = 0;
-// adding scroll event
-window.addEventListener('scroll', function(){
-  // detects new state and compares it with the new one
-  if ((document.body.getBoundingClientRect()).top > scrollPos)
-    document.getElementById("navbar").style.animation = 'showNav 1.5s linear';
-  
-	else
-		document.getElementById("navbar").style.animation = 'hideNav 1.5s linear';
-   document.getElementById("navbar").style.animationFillMode = 'forwards';
-	// saves the new position for iteration.
-	scrollPos = (document.body.getBoundingClientRect()).top;
-});
 </script>
 </html>
