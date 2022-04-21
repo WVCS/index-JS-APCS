@@ -9,11 +9,11 @@
 }
 
 ::-webkit-scrollbar {
-    background: #f7b100;
+    background: #e04341;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: darkOrange;
+    background: #e0734f;
     border-radius: 15px;
 }
 
@@ -27,31 +27,13 @@ body {
 
 #navbar{
   list-style-type: none;
+  position: fixed;
   background-color: #f7b100;
   /*background-image: url("https://media2.giphy.com/avatars/danielfigueirdo/mR5uHXLuePGT.gif");*/
   width: 100%;
-  
-  transform-origin: top center;
-  animation: none;
-}
-
-#nav-container{
-  perspective: 1000px;
-  position: fixed;
   left: 0;
   top: 0;
   z-index: 100;
-  width: 100%;
-}
-
-@keyframes hideNav{
-  from{transform: rotateX(0deg);}
-  to{transform: rotateX(-180deg);}
-}
-
-@keyframes showNav{
-  from{transform: rotateX(-180deg);}
-  to{transform: rotateX(0deg);}
 }
 
 .navLink {
@@ -139,14 +121,11 @@ a {
 
 #top_banner {
   width: 100%;
-  height: 400px;
+  height: 50vh;
   top: 0;
   left: 0;
-}
-
-#top_banner img{
-  width: 100%;
-  height: 400px;
+  background-image: url("https://github.com/WVCS/index-JS-APCS/blob/main/group/media/group_site/sky_banner.jpg?raw=true");
+  background-size: cover;
 }
 
 #grass {
@@ -403,6 +382,42 @@ h3{
   padding-right: 5px;
   
   float: right;
+}
+
+#bannerToad{
+  width: 10%;
+  transform: translate(160%, -105%);
+  transform-origin: bottom center;
+  animation: bannerT 2s ease 2s infinite alternate;
+}
+
+@keyframes bannerT{
+  from{transform: translate(160%, -110%) rotate(-15deg);}
+  to{transform:translate(160%, -105%) rotate(15deg);}
+}
+
+#shy1{
+  width: 10%;
+  transform: translate(-280%, -105%) scaleX(-1);
+  transform-origin: bottom center;
+  animation: shy 2s ease 2s infinite alternate;
+}
+
+@keyframes shy{
+  from{transform: translate(-280%, -120%) scaleX(-1);}
+  to{transform:translate(-280%, -105%) scaleX(-1);}
+}
+
+#shy2{
+  width: 10%;
+  transform: translate(-400%, -105%) scaleX(-1);
+  transform-origin: bottom center;
+  animation: shy2 2s ease 2s infinite alternate;
+}
+
+@keyframes shy2{
+  from{transform: translate(-400%, -105%) scaleX(-1);}
+  to{transform:translate(-400%, -120%) scaleX(-1);}
 }
 
 p, td{
