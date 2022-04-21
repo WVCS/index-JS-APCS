@@ -27,13 +27,31 @@ body {
 
 #navbar{
   list-style-type: none;
-  position: fixed;
   background-color: #f7b100;
   /*background-image: url("https://media2.giphy.com/avatars/danielfigueirdo/mR5uHXLuePGT.gif");*/
   width: 100%;
+  
+  transform-origin: top center;
+  animation: none;
+}
+
+#nav-container{
+  perspective: 1000px;
+  position: fixed;
   left: 0;
   top: 0;
   z-index: 100;
+  width: 100%;
+}
+
+@keyframes hideNav{
+  from{transform: rotateX(0deg);}
+  to{transform: rotateX(-180deg);}
+}
+
+@keyframes showNav{
+  from{transform: rotateX(-180deg);}
+  to{transform: rotateX(0deg);}
 }
 
 .navLink {
