@@ -142,9 +142,11 @@ a {
   height: 50vh;
   top: 0;
   left: 0;
-  z-index: 3;
-  background-image: url("https://github.com/WVCS/index-JS-APCS/blob/main/group/media/group_site/sky_banner.jpg?raw=true");
-  background-size: cover;
+}
+
+#top_banner img{
+  width: 100%;
+  height: 50vh;
 }
 
 #grass {
