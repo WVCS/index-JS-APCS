@@ -180,7 +180,7 @@ p{
   position: absolute;
   width: 80vw;
   height: 35vh;
-  max-height: 250px;
+  min-height: 250px;
   margin-bottom: 20px;
 }
 
