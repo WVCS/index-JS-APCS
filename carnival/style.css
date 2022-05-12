@@ -103,7 +103,7 @@ h1 {
   font-family: 'Alegreya Sans', sans-serif;
   font-size: 8vw;
   color: white;
-  -webkit-text-stroke: 3px black;
+  -webkit-text-stroke: 0.2vw black;
   text-shadow: 2px 2px black;
   margin-top: -10px;
   margin-bottom: -10px;
@@ -113,7 +113,7 @@ h2 {
   font-family: 'Alegreya Sans', sans-serif;
   font-size: 6vw;
   color: white;
-  -webkit-text-stroke: 3px black;
+  -webkit-text-stroke: 0.1vw black;
   text-shadow: 2px 2px black;
   margin-right: 10px;
   margin-top: -5px;
@@ -125,13 +125,14 @@ h2 {
 p{
   font-family: 'Dekko', sans-serif;
   font-weight: bold;
-  font-size: 2vw;
+  font-size: 2.2vw;
 }
 
 .quote{
   width: 55%;
   color: white;
-  font-size: 2vw;
+  font-family: "Dekko", sans-serif;
+  font-size: 2.2vw;
   position: absolute;
   bottom: 0;
   right: 10px;
