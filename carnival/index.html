@@ -1,1 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inkwell Carnival</title>
+  
+  <!--- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Courgette">
+</head>
+<body>
+  <nav>
+    <div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn"></button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#activities">Activities</a>
+    <a href="#tickets">Tickets</a>
+    <a href="#deals">Deals</a>
+    <a href="#entertainers">Actors</a>
+  </div>
+</div>
+  </nav>
+  <div ID="banner"
+  <div ID="video">
+    <video autoplay muted loop src="https://github.com/WVCS/index-JS-APCS/blob/main/carnival/videos/funfair-fever.mp4?raw=true">
+  </div>
+  <div ID="logo_cont">
+    <img ID="logo" src="https://github.com/WVCS/index-JS-APCS/blob/main/carnival/images/inkwell-01.png?raw=true">
+  </div>
+  <div ID="main">
+    <div ID="wood"></div>
+    <div ID="intro">
+    <h1> One Heck of a Time! </h1>
+      <p style="width: 50vw; margin-left: 10px;">It's a swell day to visit the Inkwell Carnival on scenic Inkwell Isle! Egestas quis ipsum suspendisse ultrices gravida dictum fusce. Scelerisque varius morbi enim nunc faucibus. At augue eget arcu dictum varius duis at consectetur lorem. Cursus turpis massa tincidunt dui. Id leo in vitae turpis massa sed elementum tempus egestas. Quisque id diam vel quam.</p>
+      <div class="container">
+        <div ID="map">
+          <img style="z-index: -1; width: 100%;" src="https://github.com/WVCS/index-JS-APCS/blob/main/carnival/images/inkwell2-map.PNG?raw=true">
+        </div>
+      </div>
+    </div>
+    <div ID="wood"></div>
+    
+    <div ID="entertainers" class="container">
+      <h1 style="position: absolute; top: 0; left: 0; z-index: 2;">Our Fine Entertainers!</h1>
+      <img width="100%" src="https://github.com/WVCS/index-JS-APCS/blob/main/carnival/images/ff_layer1.png?raw=true">
+      <div ID="carousel">
+        <button ID="left" type="button" onclick="moveLeft()"><img src="https://github.com/WVCS/index-JS-APCS/blob/main/carnival/images/arrow_R.gif?raw=true" style="transform: scaleX(-1); width: 100%;"></button>
+        <button ID="right" onclick="moveRight()"><img src="https://github.com/WVCS/index-JS-APCS/blob/main/carnival/images/arrow_R.gif?raw=true" style="width: 100%;"></button>
+       <div ID="viewer">
+        <div ID="slideview">
+          <div class="slide">
+            <div class="info a">
+              <img src="https://github.com/WVCS/index-JS-APCS/blob/main/carnival/images/baroness.png?raw=true" class="ent">
+              <h2>Baroness Von Bon Bon</h2>
+              <p class="quote">I won't sugarcoat it...you never stood a chance!</p>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="info b">
+              <img src="https://github.com/WVCS/index-JS-APCS/blob/main/carnival/images/djimmi.png?raw=true" class="ent">
+              <h2>Djimmi The Great</h2>
+              <p class="quote">You look the fool, falling for the first trick I learnt at genie school.</p>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="info c">
+              <img src="https://github.com/WVCS/index-JS-APCS/blob/main/carnival/images/beppi.png?raw=true" class="ent">
+              <h2>Beppi The Clown</h2>
+              <p class="quote">What'd the balloon animals think of the cup? Quite the gob-let-down!</p>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="info d">
+              <img src="https://github.com/WVCS/index-JS-APCS/blob/main/carnival/images/wally.png?raw=true" class="ent">
+              <h2>Wally Warbles</h2>
+              <p class="quote">Even without my feathers, you're in for stormy weather!</p>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="info e">
+              <img src="https://github.com/WVCS/index-JS-APCS/blob/main/carnival/images/grim.png?raw=true" class="ent">
+              <h2>Grim Matchstick</h2>
+              <p class="quote">Don't m-m-m-misunderstand my flames — I just meant fun and games.</p>
+            </div>
+          </div>
+       </div>
+        </div>
+     </div>
+    </div>
+    <div ID="wood"><p style="color: white; text-align: right; margin-right: 10px;">*Entertainers may be hostile as all currently owe their souls to the devil.</p></div>
+    <div ID="activities">
+      <h1 ID="activities">Hours of Fun!</h1>
+      <center>
+      <div ID="attract">
+        <div>
+          <p>Sugarland Shimmy Bounce House</p>
+        <img src="https://github.com/WVCS/index-JS-APCS/blob/main/carnival/images/Baroness_Von_Bon_Bon.png?raw=true" class="scrnsht"></div>
+        <div>
+          <p>Djimmi's Magic Act</p>
+        <img src="https://github.com/WVCS/index-JS-APCS/blob/main/carnival/images/Swords.png?raw=true" class="scrnsht"></div>
+        <div>
+          <p>Beppi's Rollin' Coaster</p>
+        <img src="https://github.com/WVCS/index-JS-APCS/blob/main/carnival/images/Beppi_The_Clown.png?raw=true" class="scrnsht"></div>
+        <div>
+          <p>Wally's Flight Simulator</p>
+        <img src="https://github.com/WVCS/index-JS-APCS/blob/main/carnival/images/Warbles.png?raw=true" class="scrnsht"></div>
+        <div>
+          <p>Matchstick Castle</p>
+        <img src="https://github.com/WVCS/index-JS-APCS/blob/main/carnival/images/Cuphead-screenshot-dragon.png?raw=true" class="scrnsht"></div>
+      </div>
+      </center>
+    </div>
+    <div ID="wood"></div>
+    <div ID="tickets" class="container">
+      <h1>Get Your Tickets!</h1>
+      <img ID="ticket" src="https://github.com/WVCS/index-JS-APCS/blob/main/carnival/images/blank-red-ticket.png?raw=true">
+      <h1 style="width: 90vw; font-size: 7vw;">Admission is Only $4 per Person</h1>
+    </div>
+    <div ID="deals">
+      <h1 style="text-align: center; font-size: 7vw; margin-bottom: 10px;"> ... 
+        <br> Bring a Pal Along for 6$!
+      </h1>
+      <div ID="pals">
+        <img style="width: 100%;" src="https://github.com/WVCS/index-JS-APCS/blob/main/carnival/images/cup_mug.gif?raw=true">
+        <div ID="cover"></div>
+      </div>
+      <p style="margin-bottom: 5px; float: right;">sponsored by</p>
+      </div>
+    <div ID="sponsor">
+      <img ID="pork" src="https://github.com/WVCS/index-JS-APCS/blob/main/carnival/images/porkrind.png?raw=true">
+      <img ID="emporium" src="https://github.com/WVCS/index-JS-APCS/blob/main/carnival/images/emporium.png?raw=true">
+    </div>
+    <div ID="wood"></div>
+    <div ID="visit" class="container">
+      <img src="https://github.com/WVCS/index-JS-APCS/blob/main/carnival/images/IMG_1623.png?raw=true" style="width: 40vw;">
+      <h3>Come Visit Us Soon!</h3>
+    </div>
+  </div>
+</body>
+  <script>
+    function getNext(current, max){
+  if(current < max){
+    return current + 1;
+  } else{
+    return 0;
+  }
+}
 
+function getTranslateX(myElement) {
+  var style = window.getComputedStyle(myElement);
+  var matrix = new WebKitCSSMatrix(style.transform);
+  console.log(matrix.m41);
+  return matrix.m41;
+}
+
+var count = 1;
+
+function moveRight(){
+  var slides = document.getElementById("slideview");
+  var current = slides.style.transform;
+  if (count < 5){
+  slides.style.transform = current + "translate(-20%)";
+    count += 1;
+  }else{
+   slides.style.transform = "translate(0%)";
+    count = 1;
+  }
+  }
+
+function moveLeft(){
+  var slides = document.getElementById("slideview");
+  var current = slides.style.transform;
+  if (count > 1){
+  slides.style.transform = current + "translate(20%)";
+    count -= 1;
+  }else{
+   slides.style.transform = "translate(-80%)";
+    count = 5;
+  }
+  }
+
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+  </script>
+</html>
