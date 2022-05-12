@@ -123,7 +123,9 @@ h2 {
 }
 
 p{
-  font-family: 'spire', sans-serif;
+  font-family: 'Dekko', sans-serif;
+  font-weight: bold;
+  font-size: 2vw;
 }
 
 .quote{
